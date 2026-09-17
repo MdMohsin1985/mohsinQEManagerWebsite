@@ -1,8 +1,10 @@
+/* Base styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   background: #f9f9f9;
   color: #333;
+  line-height: 1.6;
 }
 
 header {
@@ -15,6 +17,7 @@ nav ul {
   list-style: none;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
   gap: 15px;
 }
 
@@ -33,4 +36,59 @@ footer {
   color: #ccc;
   text-align: center;
   padding: 1rem;
+}
+
+/* Project cards */
+.project {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.project img, .project video {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  section {
+    padding: 1rem;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  nav ul {
+    gap: 10px;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+  }
+
+  section h2 {
+    font-size: 1.2rem;
+  }
 }

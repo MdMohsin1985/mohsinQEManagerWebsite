@@ -50,6 +50,9 @@ const achievements = [
 ];
 
 export default function Home() {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+  const resumeHref = `${basePath}/resume.pdf`;
+
   return (
     <>
       <Head>
@@ -73,7 +76,7 @@ export default function Home() {
               <a href="#projects" className="hover:text-ocean">Projects</a>
               <a href="#contact" className="hover:text-ocean">Contact</a>
             </div>
-            <a href="/resume.pdf" download className="btn-secondary">
+            <a href={resumeHref} download className="btn-secondary">
               Resume
             </a>
           </nav>
@@ -223,7 +226,7 @@ export default function Home() {
             </h2>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a href="mailto:mohsinsang@gmail.com" className="btn-light">Email Me</a>
-              <a href="/resume.pdf" download className="btn-outline-light">
+              <a href={resumeHref} download className="btn-outline-light">
                 Download Resume
               </a>
             </div>

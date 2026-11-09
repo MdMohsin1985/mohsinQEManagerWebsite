@@ -15,11 +15,11 @@
 
 @layer components {
   .section {
-    @apply mx-auto max-w-6xl px-6 py-14 sm:py-16;
+    @apply mx-auto max-w-6xl px-6 py-7 sm:py-8;
   }
 
   .section-heading {
-    @apply mb-8 max-w-3xl;
+    @apply mb-5 max-w-3xl;
   }
 
   .section-heading h2 {
@@ -38,7 +38,7 @@
     @apply rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 shadow-sm;
   }
 
-  .list-item {
+  .content-card {
     @apply rounded-2xl border border-slate-200 bg-white px-5 py-4 font-medium leading-7 text-slate-700 shadow-sm;
   }
 
